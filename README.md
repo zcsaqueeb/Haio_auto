@@ -42,7 +42,7 @@ Ensure you have:
    ```
 
 3. Configuration:
-   - Add your referral codes to `referralCodes.txt`, one code per line.
+   - Add your referral codes to `code.txt`, one code per line.
    - Ensure the `code.txt` file is ready for any additional data needed.
 
 ---
