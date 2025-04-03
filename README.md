@@ -1,4 +1,4 @@
-Here's the updated `README.md` incorporating your GitHub repository link prominently:
+Here’s the polished `README.md` file tailored for your project with all the necessary details:
 
 ---
 
@@ -6,26 +6,23 @@ Here's the updated `README.md` incorporating your GitHub repository link promine
 
 🚀 **Boost your rewards with my referral link**: [Join Here!](https://haio.fun/introduction/?ref=7510bd0a69ecb690a488b3b12b2efeb8ccb99f09)
 
-📂 **Access the project on GitHub**: [Haio Auto Repository](https://github.com/zcsaqueeb/Haio_auto.git)
-
-This script automates wallet creation, applies referral codes, and claims rewards via the Haio API. It's designed for smooth execution, multi-referral support, and bot-detection mitigation, ensuring efficient and seamless functionality.
+This project automates wallet creation, applies referral codes, and claims rewards via the Haio API. It supports **proxy** and **non-proxy** setups, allowing flexible configuration for seamless execution.
 
 ---
 
 ## Features
 - 🔑 **Wallet Creation**: Automatically generates Solana wallets.
-- 🌟 **Multi-Referral Support**: Supports multiple referral codes for maximum efficiency.
-- 🎁 **Reward Automation**: Automatically applies referrals and claims rewards.
-- 🤖 **Human-Like Interaction**: Randomized delays to avoid bot detection.
-- 🛠️ **Customizable**: Adjustable settings to suit your needs.
+- 🌟 **Multi-Referral Support**: Handles multiple referral codes stored in `code.txt`.
+- 🎁 **Reward Automation**: Applies referral codes and claims rewards with ease.
+- 🌐 **Proxy Support**: Compatible with HTTP, HTTPS, SOCKS4, SOCKS5, and other proxy formats.
+- 🛠️ **Customizable**: Easily configurable to suit your needs.
 
 ---
 
 ## Prerequisites
-Ensure you have:
 1. [Node.js](https://nodejs.org/) (version 16 or higher recommended)
-2. [npm](https://www.npmjs.com/) (comes with Node.js)
-3. Stable internet access.
+2. [npm](https://www.npmjs.com/) (comes bundled with Node.js)
+3. Stable internet connection.
 
 ---
 
@@ -41,50 +38,71 @@ Ensure you have:
    npm install
    ```
 
-3. Configuration:
-   - Add your referral codes to `code.txt`, one code per line.
-   - Ensure the `code.txt` file is ready for any additional data needed.
+3. Add your referral codes:
+   - Create or modify the `code.txt` file in the project root.
+   - Add one referral code per line.
+
+4. (Optional) Configure your proxy:
+   - Set your proxy address by defining the `PROXY` environment variable:
+     ```bash
+     export PROXY="http://your-proxy-address:port"
+     ```
+   - Alternatively, you can edit the `proxy` variable directly in the script.
 
 ---
 
 ## Usage
-Run the script with:
+### Non-Proxy Mode:
+Run the non-proxy script directly:
 ```bash
-node coffin.js
+node non-proxy-script.js
 ```
 
-### Adjustments
-- Change the `referralCount` variable in `script.js` to set the number of referrals.
-- Ensure all referral codes are listed in `referralCodes.txt`.
+### Proxy Mode:
+Ensure the proxy configuration is set, then run:
+```bash
+node proxy-script.js
+```
 
 ---
 
 ## Outputs
-- Wallets and referral details are saved in `accounts.json`.
-- Logs provide detailed feedback on each operation.
+- Wallets and referral details are saved in the `accounts.json` file.
+- Each wallet entry includes:
+  - **Public Key**
+  - **Secret Key**
+  - **Referral Code Used**
+
+### Example `accounts.json` File:
+```json
+[
+    {
+        "publicKey": "YourPublicKey1",
+        "secretKey": "YourSecretKey1",
+        "referralCodeUsed": "ReferralCode1"
+    },
+    {
+        "publicKey": "YourPublicKey2",
+        "secretKey": "YourSecretKey2",
+        "referralCodeUsed": "ReferralCode2"
+    }
+]
+```
 
 ---
 
-## Project Structure
-```
-Haio_auto/
-├── script.js           # Main script
-├── referralCodes.txt   # Input: Referral codes
-├── code.txt            # Input: Extra data file
-├── accounts.json       # Output: Wallet details
-├── package.json        # Dependencies and metadata
-└── README.md           # Documentation
-```
+## Proxy Compatibility
+This script supports the following proxy formats:
+- **HTTP**: `http://username:password@proxy-address:port`
+- **HTTPS**: `https://username:password@proxy-address:port`
+- **SOCKS4/SOCKS5**: `socks5://username:password@proxy-address:port`
 
----
-
-## Bot Detection Mitigation
-Randomized delays simulate human-like interactions to avoid bot detection.
+Configure the proxy according to your setup for secure and flexible connectivity.
 
 ---
 
 ## Disclaimer
-This project is for educational purposes only. Ensure compliance with the terms and conditions of the services and APIs used.
+This project is intended for educational purposes only. Please ensure you comply with the terms and conditions of the services and APIs used.
 
 ---
 
