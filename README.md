@@ -1,6 +1,4 @@
----
-
-# Automated Wallet Referral and Reward Script
+   # Automated Wallet Referral and Reward Script
 
 🚀 **Boost your rewards with my referral link**: [Join Here!](https://haio.fun/introduction/?ref=7510bd0a69ecb690a488b3b12b2efeb8ccb99f09)
 
