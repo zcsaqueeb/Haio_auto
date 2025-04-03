@@ -32,6 +32,8 @@ This project automates wallet creation, applies referral codes, and claims rewar
 2. Install dependencies:
    ```bash
    npm install
+   npm install proxy-agent
+
    ```
 
 3. Add your referral codes:
