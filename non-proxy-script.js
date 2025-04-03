@@ -87,7 +87,7 @@ async function randomDelay() {
 (async () => {
     console.log(chalk.green("🔹 Running Combined Script..."));
 
-    for (let i = 0; i < 8000; i++) {  // increce refer count here
+    for (let i = 0; i < 60; i++) {  // increce refer count here
         console.log(chalk.blue(`\n🔄 Creating Wallet ${i + 1}/100...`));
         const keypair = Keypair.generate();
         const publicKey = keypair.publicKey.toBase58();
