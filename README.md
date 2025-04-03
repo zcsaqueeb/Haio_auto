@@ -1,12 +1,10 @@
-Here’s the polished `README.md` file tailored for your project with all the necessary details:
-
 ---
 
 # Automated Wallet Referral and Reward Script
 
 🚀 **Boost your rewards with my referral link**: [Join Here!](https://haio.fun/introduction/?ref=7510bd0a69ecb690a488b3b12b2efeb8ccb99f09)
 
-This project automates wallet creation, applies referral codes, and claims rewards via the Haio API. It supports **proxy** and **non-proxy** setups, allowing flexible configuration for seamless execution.
+This project automates wallet creation, applies referral codes, and claims rewards via the Haio API. It supports **proxy** and **non-proxy** setups, with dynamic proxy configuration using `proxy.txt` for seamless execution.
 
 ---
 
@@ -14,7 +12,7 @@ This project automates wallet creation, applies referral codes, and claims rewar
 - 🔑 **Wallet Creation**: Automatically generates Solana wallets.
 - 🌟 **Multi-Referral Support**: Handles multiple referral codes stored in `code.txt`.
 - 🎁 **Reward Automation**: Applies referral codes and claims rewards with ease.
-- 🌐 **Proxy Support**: Compatible with HTTP, HTTPS, SOCKS4, SOCKS5, and other proxy formats.
+- 🌐 **Proxy Support**: Compatible with HTTP, HTTPS, SOCKS4, and SOCKS5 proxy formats, retrieved dynamically from `proxy.txt`.
 - 🛠️ **Customizable**: Easily configurable to suit your needs.
 
 ---
@@ -42,12 +40,9 @@ This project automates wallet creation, applies referral codes, and claims rewar
    - Create or modify the `code.txt` file in the project root.
    - Add one referral code per line.
 
-4. (Optional) Configure your proxy:
-   - Set your proxy address by defining the `PROXY` environment variable:
-     ```bash
-     export PROXY="http://your-proxy-address:port"
-     ```
-   - Alternatively, you can edit the `proxy` variable directly in the script.
+4. Add your proxy configuration:
+   - Create or modify the `proxy.txt` file in the project root.
+   - Add a single proxy address (e.g., `http://username:password@proxy-address:port`) as a single line.
 
 ---
 
@@ -59,7 +54,7 @@ node non-proxy-script.js
 ```
 
 ### Proxy Mode:
-Ensure the proxy configuration is set, then run:
+Ensure the proxy is defined in `proxy.txt` and then run:
 ```bash
 node proxy-script.js
 ```
@@ -91,13 +86,18 @@ node proxy-script.js
 
 ---
 
-## Proxy Compatibility
-This script supports the following proxy formats:
+## Proxy Configuration
+### Dynamic Proxy Setup:
+The script retrieves the proxy from `proxy.txt`. Supported proxy formats include:
 - **HTTP**: `http://username:password@proxy-address:port`
 - **HTTPS**: `https://username:password@proxy-address:port`
-- **SOCKS4/SOCKS5**: `socks5://username:password@proxy-address:port`
+- **SOCKS4**: `socks4://username:password@proxy-address:port`
+- **SOCKS5**: `socks5://username:password@proxy-address:port`
 
-Configure the proxy according to your setup for secure and flexible connectivity.
+### Example `proxy.txt` File:
+```plaintext
+http://username:password@proxy-address:port
+```
 
 ---
 
