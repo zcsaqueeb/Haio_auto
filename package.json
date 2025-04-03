@@ -20,6 +20,7 @@
     "https-proxy-agent": "^7.0.6",
     "inquirer": "^8.2.6",
     "ora": "^8.2.0",
+    "proxy-agent": "^6.5.0",
     "tweetnacl": "^1.0.3"
   },
   "description": ""
